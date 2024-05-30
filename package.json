@@ -10,16 +10,7 @@
     "kitchen-theme",
     "extensions"
   ],
-  "homepage": "https://github.com/lobehub/sd-webui-lobe-theme",
-  "bugs": {
-    "url": "https://github.com/lobehub/sd-webui-lobe-theme/issues/new"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lobehub/sd-webui-lobe-theme.git"
-  },
   "license": "AGPL3",
-  "author": "LobeHub <i@lobehub.com>",
   "sideEffects": false,
   "main": "javascript/main.js",
   "files": [
