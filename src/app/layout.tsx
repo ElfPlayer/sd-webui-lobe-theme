@@ -83,7 +83,7 @@ export const Layout = memo<PropsWithChildren>(({ children }) => {
         <link href={manifest(genAssets)} rel="manifest" />
         <meta content={TITLE} property="og:title" />
         <meta content={DESC} property="og:description" />
-        <meta content="https://github.com/lobehub/sd-webui-lobe-theme" property="og:url" />
+        <meta content="https://github.com/ElfPlayer/sd-webui-lobe-theme" property="og:url" />
         <meta content={TITLE} property="og:site_name" />
         <meta content="en-US" property="og:locale" />
         <meta
@@ -99,7 +99,7 @@ export const Layout = memo<PropsWithChildren>(({ children }) => {
           content="https://repository-images.githubusercontent.com/606329910/7fd79db5-fd91-450c-9e95-8ccce8ffdc0b"
           name="twitter:image"
         />
-        <link href="https://github.com/lobehub/sd-webui-lobe-theme" rel="canonical" />
+        <link href="https://github.com/ElfPlayer/sd-webui-lobe-theme" rel="canonical" />
       </Helmet>
       <GlobalLayout>
         {storeLoading === false && loading === false ? children : <Loading />}

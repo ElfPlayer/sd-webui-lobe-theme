@@ -74,7 +74,7 @@ export const MoreProducts = [
     description: 'Stable Diffusion Extension',
     openExternal: true,
     title: '🤯 Lobe Theme',
-    url: 'https://github.com/lobehub/sd-webui-lobe-theme',
+    url: 'https://github.com/ElfPlayer/sd-webui-lobe-theme',
   },
   {
     description: 'Minifier ExtraNetwrok Covers',
