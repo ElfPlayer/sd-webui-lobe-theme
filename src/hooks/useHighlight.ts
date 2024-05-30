@@ -7,7 +7,7 @@ import { themeConfig } from '@/modules/PromptHighlight/features/promptTheme';
 
 let cacheHighlighter: HighlighterCore;
 
-const initHighlighter = async(): Promise<HighlighterCore> => {
+const initHighlighter = async (): Promise<HighlighterCore> => {
   let highlighter = cacheHighlighter;
 
   if (highlighter) return highlighter;
@@ -25,7 +25,7 @@ const initHighlighter = async(): Promise<HighlighterCore> => {
 };
 
 export const useHighlight = (text: string, isDarkMode: boolean) =>
-  useSWR([isDarkMode ? 'dark' : 'light', text].join('-'), async() => {
+  useSWR([isDarkMode ? 'dark' : 'light', text].join('-'), async () => {
     try {
       const highlighter = await initHighlighter();
       const html = highlighter?.codeToHtml(text, {

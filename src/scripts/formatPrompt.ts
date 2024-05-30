@@ -177,11 +177,11 @@ export const Converter = {
       })
       .filter(Boolean)
       .sort((a, b) => {
-        return a.includes('<') && !b.includes('<') ?
-          1 :
-          b.includes('<') && !a.includes('<') ?
-            -1 :
-            0;
+        return a.includes('<') && !b.includes('<')
+          ? 1
+          : b.includes('<') && !a.includes('<')
+            ? -1
+            : 0;
       });
   },
 
@@ -215,11 +215,11 @@ export const Converter = {
     ) as HTMLTextAreaElement;
     const negResult = Converter.convert(negprompt.value);
     negprompt.value =
-      negResult.match(/^lowres,/) === null ?
-        negResult.length === 0 ?
-          default_negative :
-          default_negative + negResult :
-        negResult;
+      negResult.match(/^lowres,/) === null
+        ? negResult.length === 0
+          ? default_negative
+          : default_negative + negResult
+        : negResult;
     Converter.dispatchInputEvent(negprompt);
   },
 

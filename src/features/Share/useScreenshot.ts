@@ -8,7 +8,7 @@ import { ImageType } from './type';
 export const useScreenshot = (imageType: ImageType = ImageType.JPG) => {
   const [loading, setLoading] = useState(false);
 
-  const handleDownload = useCallback(async() => {
+  const handleDownload = useCallback(async () => {
     setLoading(true);
     try {
       let screenshotFn: any;

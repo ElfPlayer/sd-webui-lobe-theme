@@ -35,9 +35,9 @@ const Footer = memo<DivProps>(({ className, ...props }) => {
       <F
         bottom={<div ref={footerReference} />}
         columns={
-          setting.layoutHideFooter ?
-            [] :
-            [
+          setting.layoutHideFooter
+            ? []
+            : [
                 {
                   title: <Brand />,
                 },

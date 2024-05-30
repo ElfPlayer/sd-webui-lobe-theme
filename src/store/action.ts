@@ -22,7 +22,7 @@ export const createSettings: StateCreator<Store, [['zustand/devtools', never]], 
   set,
   get,
 ) => ({
-  onInit: async() => {
+  onInit: async () => {
     set(() => ({ loading: true }), false, 'onInit');
     const { onLoadSetting, onLoadVersion, onLoadLatestVersion, onLoadLocalOptions } = get();
     await onLoadLocalOptions();
@@ -31,15 +31,15 @@ export const createSettings: StateCreator<Store, [['zustand/devtools', never]], 
     await onLoadSetting();
     set(() => ({ loading: false }), false, 'onInit');
   },
-  onLoadLatestVersion: async() => {
+  onLoadLatestVersion: async () => {
     const latestVersion = await getLatestVersion();
     set(() => ({ latestVersion }), false, 'onLoadLatestVersion');
   },
-  onLoadLocalOptions: async() => {
+  onLoadLocalOptions: async () => {
     const localeOptions = await getLocaleOptions();
     set(() => ({ localeOptions }), false, 'onLoadLocalOptions');
   },
-  onLoadSetting: async() => {
+  onLoadSetting: async () => {
     let themeSetting;
     const webuiSetting: any = await getSetting();
 
@@ -76,11 +76,11 @@ export const createSettings: StateCreator<Store, [['zustand/devtools', never]], 
     consola.success('🤯 [setting] loaded');
     console.table(setting);
   },
-  onLoadVersion: async() => {
+  onLoadVersion: async () => {
     const version = await getVersion();
     set(() => ({ version }), false, 'onLoadVersion');
   },
-  onSetSetting: async(setting) => {
+  onSetSetting: async (setting) => {
     const oldSetting = get().setting;
     const newSetting = { ...oldSetting, ...setting };
     localStorage.setItem(SETTING_KEY, JSON.stringify(newSetting));

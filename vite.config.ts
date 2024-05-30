@@ -47,7 +47,7 @@ export default defineConfig({
     },
     !isProduction && {
       configureServer: (server) => {
-        server.middlewares.use(async(_request, res, next): Promise<void> => {
+        server.middlewares.use(async (_request, res, next): Promise<void> => {
           if (
             _request.originalUrl === '/dev' ||
             _request.originalUrl === '/dev?__theme=dark' ||

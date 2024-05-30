@@ -53,9 +53,9 @@ const QuickSettingSidebar = memo<QuickSettingSidebarProps>(({ headerHeight }) =>
         <DraggablePanelContainer
           className={styles.container}
           style={
-            mode === 'float' ?
-              { background: theme.colorBgContainer, minWidth: setting.sidebarWidth } :
-              { minWidth: setting.sidebarWidth }
+            mode === 'float'
+              ? { background: theme.colorBgContainer, minWidth: setting.sidebarWidth }
+              : { minWidth: setting.sidebarWidth }
           }
         >
           <DraggablePanelHeader
